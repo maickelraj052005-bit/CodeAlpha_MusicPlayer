@@ -1,3 +1,5 @@
+<!-- index.html -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +10,10 @@
     <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-    <title>Glass Calculator</title>
+    <title>Glass Music Player</title>
+
+    <link rel="icon"
+    href="images/cover1.jpg">
 
     <link rel="stylesheet"
     href="style.css">
@@ -25,56 +30,132 @@
     <div class="bg1"></div>
     <div class="bg2"></div>
 
-    <!-- Calculator -->
+    <div class="container">
 
-    <div class="calculator">
+        <!-- Playlist -->
 
-        <!-- Display -->
+        <div class="playlist">
 
-        <input type="text"
-        id="display"
-        placeholder="0"
-        readonly>
+            <h2>Playlist</h2>
 
-        <!-- Buttons -->
+            <input type="text"
+            id="search"
+            placeholder="Search songs...">
 
-        <div class="buttons">
+            <!-- Song 1 -->
 
-            <button class="operator">AC</button>
+            <div class="song active">
 
-            <button class="operator">DEL</button>
+                <img src="images/cover1.jpg">
 
-            <button class="operator">%</button>
+                <div>
 
-            <button class="operator">/</button>
+                    <h4>song 1</h4>
+                    <p>Artist</p>
 
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
+                </div>
 
-            <button class="operator">*</button>
+            </div>
 
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
+            <!-- Song 2 -->
 
-            <button class="operator">-</button>
+            <div class="song">
 
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
+                <img src="images/cover2.jpg">
 
-            <button class="operator">+</button>
+                <div>
 
-            <button>0</button>
+                    <h4>song 2</h4>
+                    <p>Artist</p>
 
-            <button>.</button>
+                </div>
 
-            <button class="equal">=</button>
+            </div>
+
+        </div>
+
+        <!-- Music Player -->
+
+        <div class="music-player">
+
+            <img src="images/cover1.jpg"
+            class="cover"
+            id="cover">
+
+            <h1 id="title">song 1</h1>
+
+            <p id="artist">Artist</p>
+
+            <!-- Progress -->
+
+            <input type="range"
+            value="0"
+            id="progress">
+
+            <div class="time">
+
+                <span id="current">0:00</span>
+
+                <span id="duration">0:00</span>
+
+            </div>
+
+            <!-- Controls -->
+
+            <div class="controls">
+
+                <button id="prev">
+
+                    <i class="fa-solid fa-backward"></i>
+
+                </button>
+
+                <button id="play">
+
+                    <i class="fa-solid fa-play"></i>
+
+                </button>
+
+                <button id="next">
+
+                    <i class="fa-solid fa-forward"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Music Wave -->
+
+            <div class="wave">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <!-- Volume -->
+
+            <div class="volume-container">
+
+                <i class="fa-solid fa-volume-high"></i>
+
+                <input type="range"
+                min="0"
+                max="1"
+                step="0.1"
+                value="1"
+                id="volume">
+
+            </div>
 
         </div>
 
     </div>
+
+    <audio id="audio"></audio>
 
     <script src="script.js"></script>
 
